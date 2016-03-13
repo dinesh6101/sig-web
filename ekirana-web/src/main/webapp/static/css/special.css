@@ -1,0 +1,65 @@
+.modalWin input {
+    height: 25px;
+    border: 1px solid #bdd3df;
+    padding:5px 16px;
+    border-radius: 3px;
+}
+
+.modalWin input:focus {
+	border: 1px solid #5fabe7;
+}
+
+.modalWin input::-webkit-input-placeholder {
+    color: #0000FF;
+    font-style:italic;
+}
+
+.modalWin input::-moz-placeholder {
+    color: #0000FF;
+    font-style:italic;
+}
+
+.modalWin input:-moz-placeholder {
+    color: #0000FF;
+    font-style:italic;
+}
+
+.modalWin input:-ms-input-placeholder {
+    color: #0000FF;
+    font-style:italic;
+}
+
+.modalWin input:focus {
+    border: 1px solid #738794;
+}
+
+.modalWin input[type=button]
+{
+    background: #009999; 
+	border-radius: 5px; 
+	font-size: 12px; 
+	font-weight: bold; 
+	color: #fff; 
+	padding: 10px 20px; 
+	text-transform: uppercase; 
+	cursor: pointer; 
+	float:right;
+	width:80px;
+}
+.modalWin [type=button]:hover {
+    background-color:#738794;
+    cursor:pointer;
+}
+
+button {
+	background: #009999; 
+	border: 0px;
+	border-radius: 5px; 
+	font-size: 12px; 
+	font-weight: bold; 
+	color: #fff; 
+	padding: 10px 20px; 
+	text-transform: uppercase; 
+	cursor: pointer; 
+	float:right;
+}
