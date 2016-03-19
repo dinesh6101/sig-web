@@ -1,0 +1,85 @@
+/* starts details */
+.details { width: 100%; float: left; background: white; }
+.details .expand_btn { display: block; margin: 0; color: #333333; font-weight: normal; text-transform: uppercase; border-bottom: 1px solid #ddeded; cursor: pointer; padding: 15px 10px;}
+.details .expand_btn .sprite { width: 15px; height: 12px; float: right; }
+.details .expand_btn.icon-triangle-bottom .sprite { background-position: -2px -359px; }
+.details .expand_btn.icon-triangle-top .sprite { background-position: -2px -330px; }
+.details .available_info { border-bottom: 1px solid #e5f5f5; float: left; width:100%; }
+/*.details .available_info ul { padding: 20px 0 22px; float: left; }
+.details .available_info ul li { padding-bottom: 5px; float: left; width: 100%; }
+.details .available_info ul li label { cursor: default; text-align: right; width: 46%; float: left; font-size: 12px; }
+.details .available_info ul li span { padding-left: 8px; text-align: left; width: 54%; float: right; font-size: 12px; }
+.details .available_info ul li span.green { color: 66a013; font-weight: bold; }
+.details .available_info ul li span.red { color: #d82222; font-weight: bold; }
+.details .available_info ul li span.light_blue { color: #009999; }
+.details .available_info ul li a { width: 60%; float: right; color: #009999; font-size: 12px; padding-left: 25px; }
+.details .available_info ul li a .sprite { float: left; width: 15px; height: 20px; margin-right: 3px; }
+.details .available_info ul li a .sprite.edit_side { background-position: -3px -233px; }
+.details .available_info ul li a:hover { color: #005d5d; }
+.details .available_info ul.chosen-results { padding-bottom: 0; }
+.details .available_info.havc .textfield { width: 166px; font-size: 11px; }
+.details .available_info.havc .override_strategy { padding: 0 0 21px 0; }
+.details .available_info.havc .override_strategy .chosen-container { width: 56% !important; margin-top: 5px; }
+.details .available_info.havc .override_strategy label { margin: 4px 0; }
+.details .available_info.havc .buttonpane { border-top: 1px solid #f2fafa; padding: 10px 0 20px; border-bottom: 1px dashed #ddeded; }
+.details .available_info.havc .havc_reset { float: left; padding-top: 20px; }
+.details .available_info.havc .havc_reset ul li { float: left; width: auto; }
+.details .available_info.havc .havc_reset ul li a { width: auto; padding: 0 28px 0 0; }
+.details .available_info.havc .havc_reset ul li.active a { color: #d82222; }
+ ends details */
+.hide { display: none; }
+.sprite { background: url("../images/bg-sprite.png") no-repeat 0 0; }
+/* added for inner sections in site pages */
+.collapsable_right_panel_section {
+	
+}
+.collapsable_right_panel_section h4 {
+	border-bottom: 1px solid #ddeded;
+	display: block;
+	color: #333333;
+	font-weight: normal;
+	text-transform: uppercase;
+	cursor: pointer;
+	padding: 22px 10px 8px 10px !important;
+	font-size: 14px;
+	-webkit-margin-before: 1.33em;
+	-webkit-margin-after: 1.33em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	box-sizing: border-box;
+	line-height: 1.5;
+ }
+ 
+.collapsable_right_panel_section table {
+  	box-sizing: border-box;
+  	color: #222222;
+	padding: 0;
+	margin: 5px 10px !important;
+	font-size: 12px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1.5;
+	position: relative;
+	cursor: auto;
+	width:98%;
+ }
+ 
+ .collapsable_right_panel_section table tr td.leftColumn {
+	text-align: right;
+	width: 50%;
+ 	color: #666666;
+ }
+ .collapsable_right_panel_section table tr td.rightColumn {
+	text-align: left;
+	width: 50%;
+ }
+ 
+ .collapsable_right_panel_section div.statusMsg {
+	font-size: 12px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1.5;
+ 	color: #666666;
+ }

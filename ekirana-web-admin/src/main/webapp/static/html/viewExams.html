@@ -1,0 +1,16 @@
+viewExams.html
+
+selected item One is : {{selectedItemOne}}
+<select data-ng-model="selectedItemOne"
+      data-ng-options="questionType.id as questionType.type for questionType in questionTypes">
+</select>
+
+
+selected item Two is : {{selectedItemTwo}}
+<select data-ng-model="selectedItemTwo">
+	<option data-ng-repeat="questionType in questionTypes" value="{{questionType.id}}">{{questionType.type}}</option>
+</select>
+
+
+selected item Three is : {{selectedItemThree}}
+<select data-ng-model="selectedItemThree" data-ng-options="questionTypes.type for questionType in questionTypes"></select>

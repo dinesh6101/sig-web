@@ -1,0 +1,127 @@
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.overlayOff {
+    background-color: rgba(0, 0, 0, 0.0);
+    z-index: 999;
+    width: 134px;
+    height:16px;
+    border: 0px solid Black;
+    text-align: left;
+    position: fixed;
+    top: 11px;
+    left: 50%;
+    margin-left:-67px;
+    margin-top:-8px;   
+    display: none;
+}
+
+.overlayOn {
+    display: block;
+}
+
+.toolBar {
+    background: -webkit-linear-gradient(#9cb2c0, #738794);
+    background: -o-linear-gradient(#9cb2c0, #738794);
+    background: -moz-linear-gradient(#9cb2c0, #738794);
+    background: linear-gradient(#9cb2c0, #738794);
+    height: 35px;
+    line-height: 35px;
+    padding-left:10px;
+    float: left;
+    text-align: left;
+    min-width: 100%;
+    color: #ffffff;
+  	border: 1px solid transparent;
+  	border-radius: 4px;
+}
+
+
+.selClient-div {
+	width: 100%;
+	padding: 0px;
+	background-color: #F8F9F8;
+	left: 0;
+	border-top: 1px solid #E4F5F5;
+	border-bottom: 1px solid #E4F5F5;
+}
+
+.sel-client-body {
+	min-width: 825px;
+}
+
+.clients-container {
+	width: 50%;
+	margin: 25px auto;
+}
+
+.clients-table {
+	width: 75%;
+}
+
+.client-name-header {
+	float:left; 
+	padding:7px 0 7px 20px; 
+	width:30%;
+}
+
+.client-name-row {
+	padding: 0 20px;
+}
+
+.footer {
+    height: 25px;
+    line-height: 25px;
+    position: relative;
+	top: 35px;
+    font-size: 9pt;
+    float: right;
+    padding-right:25px;
+}
+
+.mutedText {
+    font-size: 9pt;
+    color:#738794;
+}
+
+.gotoSiteItem .site-not-exist{
+  border-color: #ff0000;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(256, 0, 0, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(256, 0, 0, .6);
+}
+
+.gotoSiteItem .site-exist {
+  border-color: #00aa00;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 170, 0, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 170, 0, .6);
+}
+
+.gotoSiteItem input[type="text"]:focus {
+    outline: none;
+    border: 1px solid #738794;
+}
+
+
+.accordian-div {
+    background-color: rgba(0, 0, 0, 0.0);
+    width: 25%;
+    height:80%;
+    border: 0px solid Black;
+    text-align: left;
+    position: absolute;
+    top: 25%;
+    left: 6%;
+    margin-left:-67px;
+    margin-top:-8px;   
+    display: block;
+}
+
+.product-name {
+	font-size: 12pt;
+	color: #879EA6;
+}
+
+.table-hover tbody tr:hover > td {
+  cursor: pointer
+}

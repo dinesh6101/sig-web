@@ -1,0 +1,40 @@
+<table border="1" cellspacing="10">
+	<tr>
+		<td>select the exam</td>
+		<td>
+		<select data-ng-model="exam.selectedObject">
+			<option data-ng-repeat="option in exam.availableOptions" value="{{option.id}}">{{option.examName}}</option>
+		</select>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Enter the start date</td>
+		<td><input type="date" data-ng-model=examSetup.startDate /></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Enter the end date</td>
+		<td><input type="date" data-ng-model=examSetup.endDate /></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Enter the test duration</td>
+		<td>
+			<select data-ng-model=duration.testDurationHH>
+				<option data-ng-repeat="hour in hours" value="{{hour}}">{{hour}}</option>
+			</select>
+		</td>
+		<td>
+			<select data-ng-model=duration.testDurationMM>
+				<option data-ng-repeat="min in mins" value="{{min}}">{{min}}</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+    <td colspan="2" align="center"><button data-ng-click="savebtn()" >Save</button> </td>
+  </tr>
+</table>
+
+<br><br>
+{{examSetup}}

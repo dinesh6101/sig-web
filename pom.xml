@@ -9,5 +9,6 @@
 	<description>SpreadITGuru Web Applications</description>
 	<modules>
 		<module>ekirana-web</module>
+		<module>ekirana-web-admin</module>
 	</modules>
 </project>

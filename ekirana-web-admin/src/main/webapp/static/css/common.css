@@ -1,0 +1,187 @@
+*, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body { background: white; color: #222222; padding: 0; margin: 0; font-size: 14px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; line-height: 1.5; position: relative; cursor: auto; }
+
+img { max-width: 100%; height: auto; -ms-interpolation-mode: bicubic; display: inline-block; vertical-align: middle; }
+
+textarea { height: auto; min-height: 50px; }
+
+select { width: 100%; }
+
+/* Typography resets */
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td { margin: 0; padding: 0; }
+
+/* Default Link Styles */
+a { color: #009999; text-decoration: none; line-height: inherit; }
+a:hover, a:focus { color: #005d5d; }
+a img { border: none; }
+
+/* Default paragraph styles */
+p { font-family: inherit; font-weight: normal; font-size: 1rem; line-height: 1.6; margin-bottom: 1.25rem; text-rendering: optimizeLegibility; }
+
+/* Helpful Typography Defaults */
+em, i { font-style: italic; line-height: inherit; }
+
+strong, b { font-weight: bold; line-height: inherit; }
+
+h1 { font-size: 20px; }
+
+h2 { font-size: 18px; }
+
+h3 { font-size: 16px; }
+
+h4 { font-size: 14px; }
+
+h5 { font-size: 12px; }
+
+h6 { font-size: 10px; }
+
+ul, li { list-style: none; margin: 0; padding: 0; }
+
+label { color: #4d4d4d; cursor: pointer; display: block; font-size: 0.875rem; font-weight: normal; line-height: 1.5; margin-bottom: 0; }
+
+table, thead, tbody, tfoot tr, th { line-height: 1.125rem; }
+
+/* starts button */
+.btn { background: #009999; border: 1px solid #009999; border-radius: 5px; font-size: 12px; font-weight: bold; color: #fff; padding: 10px 20px; display: inline-block; text-transform: uppercase; cursor: pointer; }
+.btn.disabled, .btn[disabled="disabled"] { opacity: 0.5; pointer-events: none; }
+.btn:hover,
+.fileUpload:hover,
+.btn-secondary:hover {
+	background-color: #66c2c2;
+	cursor: pointer;
+}
+.btn:focus,
+.fileUpload:focus,
+.btn-secondary:focus {
+	outline: none;
+}
+
+.btn-secondary, div label.fileUpload { background: #FFFFFF; border: 1px solid #009999; border-radius: 5px; font-size: 12px; font-weight: bold; color: #009999; padding: 10px 20px; display: inline-block; text-transform: uppercase; cursor: pointer; }
+.btn-secondary.disabled, .btn-secondary[disabled="disabled"], .fileUpload.disabled { opacity: 0.5; pointer-events: none; }
+/* ends button */
+
+/* starts table */
+table.general_table { border: 1px solid #dfe8e8; border-spacing: 0; width:100%; word-wrap: break-word;}
+table.general_table .date { margin-right: 10px; }
+table.general_table span.count { display: block; }
+table.general_table .ico { background: url(../images/bg_table_sprite.png) no-repeat 0 0; padding-left: 22px; }
+table.general_table .ico.logged_in { background-position: 0 0; }
+table.general_table .ico.logged_out { background-position: 4px -32px; }
+table.general_table .ico.update_info { background-position: 4px -63px; }
+table.general_table .ico.pending_info { background-position: 4px -94px; }
+table.general_table .ico.checked_info { background-position: 4px -124px; }
+table.general_table thead { background: #163543; }
+table.general_table thead tr th { padding: 10px 10px 9px; color: #fff; border-bottom: 1px solid #0f2630; text-transform: uppercase; text-align: left; font-size: 12px; font-weight: normal; }
+table.general_table thead tr th:first-child { padding-left: 20px; }
+table.general_table thead tr th:last-child { padding-right: 20px; }
+table.general_table tbody tr:not(.selected):hover { background-color: #e7f1f5; cursor: pointer; }
+table.general_table tbody tr td { padding: 14px 5px; color: #333333; font-size: 12px; border-top: 1px solid #ebf4f4; }
+table.general_table tbody tr td a { color: #333; }
+table.general_table tbody tr td:first-child { padding-left: 20px; }
+table.general_table tbody tr td:last-child { padding-right: 20px; }
+table.general_table tbody tr td.multiple_lines { padding-top: 10px; padding-bottom: 10px; }
+table.general_table tbody tr:first-child td { border-top: none; }
+table.general_table tbody tr:nth-child(2n) { background-color: #f5fbfb; }
+table.general_table.havc_table thead tr th { padding: 10px 8px 9px; }
+table.general_table.havc_table tbody tr td { font-size: 12px; }
+table.general_table.havc_table tbody tr td:first-child { padding: 20px 10px; }
+table.general_table.havc_table .date { margin-right: 6px; }
+table.general_table tbody tr.selected { outline: thin solid #009999; }
+
+/* ends table */
+
+/* starts uniform */
+div.checker span, div.radio span { background: url(../images/bg_form_sprite.png) no-repeat; margin-left: 15px; }
+
+div.checker, div.checker span, div.checker input, div.radio, div.radio span, div.radio input { height: 25px; width: 25px; cursor: pointer; }
+
+div.checker span, div.checker.hover span, div.checker.focus span, div.checker.focus.active span, div.checker.hover.active span { background-position: 0 0 !important; }
+
+div.checker span.checked, div.checker.hover span.checked, div.checker.focus span.checked, div.checker.active span.checked, div.checker.focus.active span.checked { background-position: 0 bottom !important; }
+
+div.radio span, div.radio.hover span, div.radio.focus span, div.radio.focus.active span, div.radio.hover.active span { background-position: 0 -425px !important; }
+
+div.radio span.checked, div.radio.hover span.checked, div.radio.focus span.checked, div.radio.active span.checked, div.radio.focus.active span.checked { background-position: 0 -464px !important; }
+
+/* ends uniform */
+
+.lower-div-line {
+	border-bottom: 1px solid #CCEBEB;
+}
+
+.upper-div-line {
+	border-top: 1px solid #CCEBEB;
+}
+
+.top-header-background {
+	background-color: #FFFFFF;
+}
+
+.main-header-background {
+	background-color: #E5F5F5;
+}
+
+.main-background {
+	background-color: #F7FCFC;
+}
+
+.sprite { background: url("../images/bg-sprite.png") no-repeat 0 0; }
+
+/* starts input, select */
+select, input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea { background: #fff; border: 1px solid #bdd3df; box-shadow: none; border-radius: 5px; color: #333333; font-size: 12px; font-family: inherit; width: 100%; height: 36px; padding: 5px 16px; }
+select:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, textarea:focus { background: #fff; border-color: #5fabe7; outline: none; box-shadow: none; }
+select.ng-invalid, input[type="text"].ng-invalid, input[type="password"].ng-invalid, input[type="date"].ng-invalid, input[type="datetime"].ng-invalid, input[type="email"].ng-invalid, input[type="number"].ng-invalid, input[type="search"].ng-invalid, input[type="tel"].ng-invalid, input[type="time"].ng-invalid, input[type="url"].ng-invalid, textarea.ng-invalid { background: #fff; border: 1px solid #DD1F1F; }
+select.ng-invalid:focus, input[type="text"].ng-invalid:focus, input[type="password"].ng-invalid:focus, input[type="date"].ng-invalid:focus, input[type="datetime"].ng-invalid:focus, input[type="email"].ng-invalid:focus, input[type="number"].ng-invalid:focus, input[type="search"].ng-invalid:focus, input[type="tel"].ng-invalid:focus, input[type="time"].ng-invalid:focus, input[type="url"].ng-invalid:focus, textarea.ng-invalid:focus { border-color: #5fabe7; }
+
+input[type="text"].searchbox { background: url(../images/bg-sprite.png) no-repeat right -286px; padding: 8px 30px 8px 0; border: none; border-bottom: 1px solid #a8b8c0; border-radius: 0; height: auto; font-size: 14px; font-weight: bold; text-transform: none; box-shadow: none; }
+input[type="text"].datepicker { background: url(../images/bg-sprite.png) no-repeat 97% -384px; background-color: #fff; cursor: pointer;}
+input[type="text"].timepicker { cursor: text; }
+
+input[type="text"]:disabled,
+input[readonly],
+input[readonly]:focus,
+textarea[readonly],
+textarea[readonly]:focus {
+	background-color: #D9D5DB;
+	color: #716D73;
+	cursor: default;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+::-webkit-input-placeholder { color: #959898; }
+
+:-moz-placeholder { /* Firefox 18- */ color: #959898; }
+
+::-moz-placeholder { /* Firefox 19+ */ color: #959898; }
+
+:-ms-input-placeholder { color: #959898; }
+
+/* Mozilla select arrow looks bad with rounded corners.
+No good fix for this without a hack */
+select {
+	border-radius: 5px 0 0 5px;
+}
+
+/* ends input */
+
+/* starts css hack for firefox */
+@-moz-document url-prefix() { .header .top_bar .logo .tag_line { margin: 0; } }
+
+/* ends css hack for firefox */
+/* don't show the x for text inputs */
+::-ms-clear { width: 0; height: 0; }
+
+/* don't show the eye for password inputs */
+::-ms-reveal { width: 0; height: 0; }
+
+.editorErrorMessage {color:#DD1F1F; float:left;}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}

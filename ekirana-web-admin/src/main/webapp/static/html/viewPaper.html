@@ -1,0 +1,136 @@
+
+
+<script type="text/javascript">
+	$(function() {
+		$(".inputdisabled").attr("disabled", "disabled");
+		//$(".btnhide").attr("display","none")
+	});
+</script>
+
+<table style="border-collapse: separate; border-spacing: 10px;">
+	<tr>
+		<td>select the exam</td>
+		<td><select data-ng-model="exam.selectedObject"
+			data-ng-change="showPaper()">
+				<option data-ng-repeat="option in exam.availableOptions"
+					value="{{option.id}}">{{option.examName}}</option>
+		</select></td>
+		<td><button data-ng-click="editbtn()" data-ng-model="edtbtn">Edit</button></td>
+
+	</tr>
+
+	<tr>
+		<td>Total Marks</td>
+
+		<td><input type="text" data-ng-model="exam.totalMarks"
+			class="inputdisabled"></td>
+		<td><button data-ng-click="saveupdatebtn()"
+				data-ng-show="editbtnvalue">Save</button></td>
+
+
+	</tr>
+
+	<tr>
+		<td>Minimum Marks</td>
+		<td><input type="text" data-ng-model="exam.minimumMarks"
+			class="inputdisabled"></td>
+	</tr>
+
+	<tr data-ng-show="exam.selectedObject">
+		<td>question</td>
+		<td>marks</td>
+		<td>options</td>
+	</tr>
+
+
+	<tr data-ng-repeat="object in setupPaper.availableOptions">
+		<td><input type="text" data-ng-model="object.question"
+			class="inputdisabled"></td>
+		<td><input type="text" data-ng-model="object.marks"
+			class="inputdisabled"></td>
+		<td data-ng-repeat="option in object.options"><INPUT
+			type="checkbox" data-ng-checked="{{option.isCorrect}}"
+			data-ng-model="option.isCorrect" class="inputdisabled" /> <input
+			type="text" value="{{option.text}}" data-ng-model="option.text"
+			class="inputdisabled"></td>
+	</tr>
+	<tr>
+		<td><button data-ng-click="addquestionbtn()"
+				data-ng-show="editbtnvalue" data-ng-model="addquestionbtnvalue">Add
+				Question</button></td>
+		<td data-ng-show="addquestionbtnvalue">Question Type</td>
+		<td><select data-ng-change=clearOptions()
+			data-ng-show="addquestionbtnvalue"
+			data-ng-model="questionType.selectedObject">
+				<option data-ng-repeat="option in questionType.availableOptions"
+					value="{{option.id}}">{{option.type}}</option>
+		</select></td>
+	</tr>
+</table>
+<div>
+<div data-ng-switch on="questionType.selectedObject">
+		<div data-ng-switch-when="1">
+	
+<table>
+<tr>
+	
+		<td><input type="text" data-ng-show="questionType.selectedObject"
+			data-ng-model=newQuestion.question></td>
+		<td><input type="text" data-ng-show="questionType.selectedObject"
+			data-ng-model="newQuestion.marks"></td>
+		<td data-ng-repeat="object in newQuestion.options track by $index">
+
+			<input type="radio" name="radioGroup" data-ng-model=someDummyModel
+			data-ng-change="changeRadio($index)" /> <input type="radio"
+			style="display: none;" data-ng-model=object.isCorrect> <input
+			type="text" data-ng-model="object.text">
+		</td>
+		</tr>
+		</table>
+		
+		</div>
+		
+		<div data-ng-switch-when="2">
+		<table><tr>
+			<td><input type="text" data-ng-show="questionType.selectedObject"
+			data-ng-model=setupPaper.question></td>
+		<td><input type="text" data-ng-show="questionType.selectedObject"
+			data-ng-model="setupPaper.marks"></td>
+		<td data-ng-repeat="object in setupPaper.options"><input
+			type="checkbox" name="checkboxGroup" data-ng-model="object.isCorrect"
+			data-ng-value={{object.isCorrect}}> <input type="text"
+			data-ng-model="object.text"></td>
+		</tr>
+</table>
+</div>
+		<div data-ng-switch-when="3">
+		<table><tr>
+			<td><input type="text" data-ng-show="questionType.selectedObject"
+			data-ng-model=setupPaper.question></td>
+		<td><input type="text" data-ng-show="questionType.selectedObject"
+			data-ng-model="setupPaper.marks"></td>
+			<td><textarea data-ng-model="answerText" rows="4" cols="50"></textarea></td>
+		</tr>
+		</table>
+		</div>
+
+		<div data-ng-switch-default></div>
+
+		</div>
+</div>
+{{setupPaper}}
+{{newQuestion}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

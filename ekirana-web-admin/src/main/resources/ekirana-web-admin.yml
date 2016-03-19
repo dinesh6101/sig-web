@@ -1,0 +1,9 @@
+server:
+  contextPath: /ekirana-admin
+  port: 90
+
+spring:
+  freemarker:
+    checkTemplateLocation: false
+  velocity:
+    checkTemplateLocation: false

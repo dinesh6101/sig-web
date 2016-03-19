@@ -1,0 +1,114 @@
+<table border="1" cellspacing="10">
+  <tr>
+    <td>Select Exam</td>
+    <td>
+    	<select data-ng-model="exam.selectedObject">
+    		<option data-ng-repeat="option in exam.availableOptions" value="{{option.id}}">{{option.examName}}</option>
+		</select>
+	</td>
+	<td>
+		Number #Questions
+	</td>
+	<td>
+		{{numberOfQuestionsAdded}}
+	</td>
+  </tr>
+  <tr>
+    <td>Select Question Type</td>
+    <td>
+    	<select data-ng-change=clearOptions() data-ng-model="questionType.selectedObject">
+    		<option data-ng-repeat="option in questionType.availableOptions" value="{{option.id}}">{{option.type}}</option>
+		</select>
+	</td>
+	<td colspan="2"></td>
+  </tr>
+</table>
+
+<div>
+  <div data-ng-switch on="questionType.selectedObject">
+      <div data-ng-switch-when="1">
+      	 <table border="1">
+		  <tr>
+		    <td>Enter Question</td>
+		    <td> <input type="text" data-ng-model=setupPaper.question> </td>
+		    <td data-ng-click="saveQuestion()"> <button>Save</button> </td>
+		  </tr>
+		  <tr>
+		  	<td>Answer :- </td>
+		  	<td>
+		  		<table border="1">
+				  <tr>
+				    <th>Option</th>
+				    <th>isCorrect</th>
+				  </tr>
+				  <tr data-ng-repeat="object in setupPaper.options track by $index">
+					<td><input type="text" data-ng-model="object.text" /></td>
+					<td>
+						<input type="radio" name="radioGroup"  data-ng-model=someDummyModel data-ng-change="changeRadio($index)" />
+						<input type="radio" style="display: none;" data-ng-model=object.isCorrect />
+					</td>
+				  </tr>
+				</table>
+		  	</td>
+		  </tr>
+		  <tr>
+		  	<td>Enter Marks :- </td>
+		  	<td> <input type="text" data-ng-model="setupPaper.marks"> </td>
+		  </tr>
+		</table>
+      </div>
+      <div data-ng-switch-when="2">
+      	<table border="1">
+		  <tr>
+		  </tr>
+		  <tr>
+		    <td>Enter Question</td>
+		    <td> <input type="text" width="100%" data-ng-model=setupPaper.question /> </td>
+		    <td data-ng-click="saveQuestion()"> <button>Save</button> </td>
+		  </tr>
+		  <tr>
+		  	<td>Answer :- </td>
+		  	<td>
+		  		<table border="1">
+				  <tr>
+				    <th>Option</th>
+				    <th>isCorrect</th>
+				  </tr>
+				  <tr data-ng-repeat="object in setupPaper.options">
+					<td><input type="text" data-ng-model="object.text"></td>
+					<td><input type="checkbox" name="checkboxGroup" data-ng-model="object.isCorrect" data-ng-value={{object.isCorrect}}> </td>
+				  </tr>
+				</table>
+		  	</td>
+		  </tr>
+		  <tr>
+		  	<td>Enter Marks :- </td>
+		  	<td> <input type="text" data-ng-model="setupPaper.marks"> </td>
+		  </tr>
+		</table>
+      </div>
+      <div data-ng-switch-when="3">
+      	<table border="1">
+		  <tr>
+		  </tr>
+		  <tr>
+		    <td>Enter Question</td>
+		    <td> <input type="text" data-ng-model=setupPaper.question /> </td>
+		    <td data-ng-click="saveQuestion()"> <button>Save</button> </td>
+		  </tr>
+		  <tr>
+		  	<td>Answer :- </td>
+		  	<td> <textarea data-ng-model="answerText" rows="4" cols="50"></textarea> </td>
+		  </tr>
+		  <tr>
+		  	<td>Enter Marks :- </td>
+		  	<td> <input type="text" data-ng-model="setupPaper.marks"> </td>
+		  </tr>
+		</table>
+      </div>
+      <div data-ng-switch-default> </div>
+  </div>
+</div>
+
+<br><br>
+setupPaper = {{setupPaper}}
